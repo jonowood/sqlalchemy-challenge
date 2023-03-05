@@ -42,11 +42,11 @@ For a specified start, calculate TMIN, TAVG, and TMAX for all the dates greater 
 
 To run the code for this project, you will need the following libraries and tools:
 
-Python 3.6 or later
-Pandas
-Matplotlib
-SQLAlchemy
-Flask
+- Python 3.6 or later
+- Pandas
+- Matplotlib
+- SQLAlchemy
+- Flask
 
 Note: you will also need the hawaii.sqlite file and the climate_starter.ipynb notebook, which are provided in this repository.
 
