@@ -50,6 +50,13 @@ To run the code for this project, you will need the following libraries and tool
 
 Note: you will also need the hawaii.sqlite file and the climate_starter.ipynb notebook, which are provided in this repository.
 
+## Project Structure
+- `resources/` directory contains the dataset in CSV format and sqlite database
+- `notebooks/` directory contains Jupyter notebooks used for data analysis, preprocessing, and model building
+- `images/` directory contains images for readme
+- `app.py` is the main Python file for the web application
+- `requirements.txt` is the list of required dependencies to run the web application
+
 ## Running the Web Application
 
 To run the web application, follow these steps:
@@ -58,3 +65,14 @@ To run the web application, follow these steps:
 2. Install the required Python libraries using ```pip install -r requirements.txt```
 3. Run ```python app.py``` in the terminal
 4. Open the web application in the browser at ```http://localhost:5000```
+
+## Acknowledgments
+I would like to thank our bootcamp instructors for their guidance and support throughout this assignment.
+
+## References
+- Python: https://www.python.org/
+- Pandas: https://pandas.pydata.org/
+- Matplotlib: https://matplotlib.org/
+- SQLAlchemy: https://www.sqlalchemy.org/
+- Flask: https://flask.palletsprojects.com/
+
