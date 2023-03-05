@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/Images/surfs-up.jpg" alt="" title="" width="600" height="600">
+<img src="/Images/surfs-up.jpg" alt="" title="" width="1000" height="600">
 </p>
 
 # Climate Analysis and Exploration in Honolulu
