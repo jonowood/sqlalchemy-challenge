@@ -52,7 +52,7 @@ Note: you will also need the hawaii.sqlite file and the climate_starter.ipynb no
 
 ## Project Structure
 - `resources/` directory contains the dataset in CSV format and sqlite database
-- `notebooks/` directory contains Jupyter notebooks used for data analysis, preprocessing, and model building
+- `notebooks/` directory contains Jupyter notebooks used for data analysis & preprocessing
 - `images/` directory contains images for readme
 - `app.py` is the main Python file for the web application
 - `requirements.txt` is the list of required dependencies to run the web application
