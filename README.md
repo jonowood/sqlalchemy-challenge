@@ -37,3 +37,24 @@ In this part, we design a Flask API based on the queries that we developed in Pa
 
 ```/api/v1.0/<start>``` and ```/api/v1.0/<start>/<end>```: Returns a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range. 
 For a specified start, calculate TMIN, TAVG, and TMAX for all the dates greater than or equal to the start date. For a specified start date and end date, calculate TMIN, TAVG, and TMAX for the dates from the start date to the end date, inclusive.
+
+## Requirements
+
+To run the code for this project, you will need the following libraries and tools:
+
+Python 3.6 or later
+Pandas
+Matplotlib
+SQLAlchemy
+Flask
+
+Note: you will also need the hawaii.sqlite file and the climate_starter.ipynb notebook, which are provided in this repository.
+
+## Running the Web Application
+
+To run the web application, follow these steps:
+
+1. Clone the repository
+2. Install the required Python libraries using ```pip install -r requirements.txt```
+3. Run ```python app.py``` in the terminal
+4. Open the web application in the browser at ```http://localhost:5000```
