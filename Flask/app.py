@@ -1,3 +1,4 @@
+# import dependencies
 from flask import Flask, jsonify
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import Session
@@ -9,16 +10,18 @@ import numpy as np
 # Set up the database, generate the engine to the sqlite file
 engine = create_engine("sqlite:///../Resources/hawaii.sqlite")
 
-# use automap_base() and reflect the database schema 
+# Use automap_base() and reflect the database schema 
 base = automap_base()
 base.prepare(engine, reflect=True)
 
-# save references to the tables in the sqlite file (measurement and station)
+# Save references to the tables in the sqlite file (measurement and station)
 t_measurement = base.classes.measurement
 t_station = base.classes.station
 
 
 app = Flask(__name__)
+
+# Home route ("/"): Displays the available routes.
 
 @app.route("/")
 def home():
@@ -31,6 +34,7 @@ def home():
         f"/api/v1.0/&lt;start&gt;/&lt;end&gt;"
     )
 
+# Precipitation route ("/api/v1.0/precipitation"): Returns a JSON dictionary of date and precipitation values for the last 12 months.
 @app.route("/api/v1.0/precipitation")
 def precipitation():
     session = Session(engine)
@@ -41,6 +45,7 @@ def precipitation():
     precipitation_dict = {date: prcp for date, prcp in precipitation_data}
     return jsonify(precipitation_dict)
 
+# Stations route ("/api/v1.0/stations"): Returns a JSON list of weather stations.
 @app.route("/api/v1.0/stations")
 def stations():
     session = Session(engine)
@@ -50,6 +55,7 @@ def stations():
     stations_list = list(np.ravel(stations))
     return jsonify(stations_list)
 
+# Temperature Observations route ("/api/v1.0/tobs"): Returns a JSON list of temperature observations for the most active station in the last 12 months.
 @app.route("/api/v1.0/tobs")
 def tobs():
     session = Session(engine)
@@ -61,6 +67,7 @@ def tobs():
     tobs_list = list(np.ravel(tobs_data))
     return jsonify(tobs_list)
 
+# Start date route ("/api/v1.0/<start>"): Returns a JSON list of the minimum, average, and maximum temperature for all dates greater than or equal to the specified start date.
 def calc_temps(start_date, end_date=None):
     session = Session(engine)
     if end_date:
@@ -72,12 +79,15 @@ def calc_temps(start_date, end_date=None):
     temps_list = list(np.ravel(temps))
     return temps_list
 
+# The calc_temps() function queries the minimum, average, and maximum temperature for a given date range or a start date only. This function is used by both the start date route and the start and end date route.
+# Start date route ("/api/v1.0/<start>"): Returns a JSON list of the minimum, average, and maximum temperature for all dates greater than or equal to the specified start date.
 @app.route("/api/v1.0/<start>")
 def start(start):
     temps = calc_temps(start)
     temps_dict = {"TMIN": temps[0], "TAVG": temps[1], "TMAX": temps[2]}
     return jsonify(temps_dict)
 
+# Start and End date route ("/api/v1.0/<start>/<end>"): Returns a JSON list of the minimum, average, and maximum temperature for the specified date range.
 @app.route("/api/v1.0/<start>/<end>")
 def start_end(start, end):
     temps = calc_temps(start, end)
