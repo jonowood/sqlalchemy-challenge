@@ -88,15 +88,12 @@ Images
    |-- surfs-up.jpg
 Notebooks
    |-- climate_starter.ipynb
-README.md
-Requirements.txt
 Resources
    |-- hawaii.sqlite
    |-- hawaii_measurements.csv
    |-- hawaii_stations.csv
-app.py
 README.md
-requirements.txt
+Requirements.txt
 ```
 ## Contributing
 
