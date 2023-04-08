@@ -44,7 +44,7 @@ Clone the repository to your local machine.
 Navigate to the project directory.
 Run the Jupyter Notebook for data analysis:
 
-```jupyter notebook climate_analysis.ipynb``
+```jupyter notebook climate_analysis.ipynb```
 
 To run the Flask API, execute the following command:
 
