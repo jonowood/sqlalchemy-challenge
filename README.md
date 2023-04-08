@@ -1,3 +1,7 @@
+![surfs-up](/Images/surfs-up.jpg)
+
+
+
 # SQLAlchemy Challenge - Hawaii Climate Analysis and Flask API
 
 #### This project is a submission for Module 10 SQLAlchemy Challenge of the UWA Data Analysis Bootcamp. Its focus is on climate analysis for Hawaii using SQLAlchemy ORM queries, Pandas, and Matplotlib. The data is obtained from SQLite databases containing temperature and precipitation measurements from various weather stations in Hawaii. Finally, a Flask API is developed to serve the data analysis results.
@@ -108,5 +112,5 @@ I would like to thank our bootcamp instructors for their guidance and support th
 - SQLAlchemy: https://www.sqlalchemy.org/
 - Flask: https://flask.palletsprojects.com/
 
-![surfs-up](/Images/surfs-up.jpg)
+
 
