@@ -1,12 +1,8 @@
-<p align="center">
-<img src="/Images/surfs-up.jpg" alt="" title="" width=750 height=600>
-</p>
-
 # SQLAlchemy Challenge - Hawaii Climate Analysis and Flask API
 
-This project, a submission for Module 10 SQLAlchemy Challenge of the UWA Data Analysis Bootcamp, is focused on climate analysis for Hawaii using SQLAlchemy ORM queries, Pandas, and Matplotlib. The data is obtained from SQLite databases containing temperature and precipitation measurements from various weather stations in Hawaii. Additionally, a Flask API is developed to serve the data analysis results.
+#### This project is a submission for Module 10 SQLAlchemy Challenge of the UWA Data Analysis Bootcamp. Its focus is on climate analysis for Hawaii using SQLAlchemy ORM queries, Pandas, and Matplotlib. The data is obtained from SQLite databases containing temperature and precipitation measurements from various weather stations in Hawaii. Finally, a Flask API is developed to serve the data analysis results.
 
-![precipitation](images/precipitation.png)
+![precipitation](/Images/Precipitation-analysis.png)
 
 ## Table of Contents
 - [Getting Started](#getting-started)
@@ -33,24 +29,18 @@ You will also need the following libraries:
 - Matplotlib 
 - Numpy
 
+You can install them using the included requirements.txt, or using pip:
 
-You can install them using pip:
-
+```pip install -r requirements.txt```
 
 ```pip install sqlalchemy flask pandas matplotlib numpy```
 
-#### Running the Project
-Clone the repository to your local machine.
-Navigate to the project directory.
-Run the Jupyter Notebook for data analysis:
+## Running the Project
 
-```jupyter notebook climate_analysis.ipynb```
-
-To run the Flask API, execute the following command:
-
-```python app.py```
-
-Access the API endpoints in your web browser.
+To run the web application, follow these steps:
+1. Clone the repository
+3. Run `python app.py` in the terminal
+4. Open the web application in the browser at `http://localhost:5000`
 
 ## Data Analysis
 
@@ -63,11 +53,17 @@ The analysis includes:
 - A list of weather stations and their activity in descending order.
 - Temperature analysis for the most active station.
 
-![station-histogram](images/Temp-obs-data.png)
+![station-histogram](Images/Temp-obs-data.png)
+
+![precipitation-summary](Images/precipitation.jpg)
+
+![most-active-stations](Images/most-active-stations.jpg)
 
 ## Flask API
 
-A Flask API is developed to serve the data analysis results. The available API routes are:
+A Flask API has been created to show the data analysis results in JSON format, as well as all available routes.
+
+The available API routes are:
 
 - `/`: List all available routes.
 - `/api/v1.0/precipitation`: Return a JSON dictionary of date and precipitation values.
@@ -76,6 +72,28 @@ A Flask API is developed to serve the data analysis results. The available API r
 - `/api/v1.0/<start>`: Return a JSON list of the minimum, average, and maximum temperature for all dates greater than or equal to the specified start date.
 - `/api/v1.0/<start>/<end>`: Return a JSON list of the minimum, average, and maximum temperature for the specified date range.
 
+## File Locations
+```
+Flask
+   |-- app.py
+Images
+   |-- Precipitation-analysis.png
+   |-- Temp-obs-data.png
+   |-- most-active-stations.jpg
+   |-- precipitation.jpg
+   |-- surfs-up.jpg
+Notebooks
+   |-- climate_starter.ipynb
+README.md
+Requirements.txt
+Resources
+   |-- hawaii.sqlite
+   |-- hawaii_measurements.csv
+   |-- hawaii_stations.csv
+app.py
+README.md
+requirements.txt
+```
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -89,4 +107,6 @@ I would like to thank our bootcamp instructors for their guidance and support th
 - Matplotlib: https://matplotlib.org/
 - SQLAlchemy: https://www.sqlalchemy.org/
 - Flask: https://flask.palletsprojects.com/
+
+![surfs-up](/Images/surfs-up.jpg)
 
