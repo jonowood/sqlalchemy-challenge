@@ -6,13 +6,17 @@ import datetime as dt
 import numpy as np
 
 
-# Set up the database
+# Set up the database, generate the engine to the sqlite file
 engine = create_engine("sqlite:///../Resources/hawaii.sqlite")
+
+# use automap_base() and reflect the database schema 
 base = automap_base()
 base.prepare(engine, reflect=True)
 
+# save references to the tables in the sqlite file (measurement and station)
 t_measurement = base.classes.measurement
 t_station = base.classes.station
+
 
 app = Flask(__name__)
 
