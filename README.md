@@ -76,7 +76,7 @@ The available API routes are:
 - `/api/v1.0/<start>`: Return a JSON list of the minimum, average, and maximum temperature for all dates greater than or equal to the specified start date.
 - `/api/v1.0/<start>/<end>`: Return a JSON list of the minimum, average, and maximum temperature for the specified date range.
 
-## File Locations
+## Project Structure
 ```
 Flask
    |-- app.py
